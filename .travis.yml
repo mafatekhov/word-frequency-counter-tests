@@ -1,6 +1,9 @@
 language: python
 python: "3.6"
 
+env:
+  - GIT_REPO=none
+
 install:
   - pip3 install -r requirements.txt
 
@@ -10,7 +13,9 @@ stages:
 jobs:
   include:
     - stage: test
-      script: python3 -m unittest discover -p *_test.py
+      script: 
+        - git clone $GIT_REPO
+        - python3 -m unittest discover -p *_test.py
 
 notifications:
   email: true
