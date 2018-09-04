@@ -10,8 +10,8 @@ jobs:
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
       - image: circleci/python:3.6.1
         environment:
-          GIT_REPO: https://github.com/demid5111/test-smart-edu-ci
-          HASH: c90f0bc7fadd153c4a15b4f3b56b63d6afb6bc10
+          GIT_REPO: none
+          GIT_HASH: none
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -47,7 +47,7 @@ jobs:
           command: |
             git clone $GIT_REPO tmp
             cd tmp
-            git reset --hard $HASH
+            git reset --hard $GIT_HASH
             cd ..
             mv tmp/* .
             ls -la
