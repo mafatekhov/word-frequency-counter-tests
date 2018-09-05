@@ -2,10 +2,6 @@ language: python
 python: "3.6"
 sudo: required
 
-env:
-  - GIT_REPO=none
-  - HASH=none
-
 install:
   - pip3 install -r requirements.txt
 
@@ -16,12 +12,6 @@ jobs:
   include:
     - stage: test
       script: 
-        - git clone $GIT_REPO tmp
-        - cd tmp
-        - git reset --hard $HASH
-        - cd ..
-        - mv tmp/* .
-        - ls -la
         - python3 -m unittest discover -p *_test.py
 
 notifications:
