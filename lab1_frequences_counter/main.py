@@ -1,8 +1,24 @@
-def calculate_frequences(text: str) -> dict:
-  pass
+"""
+Labour work #1
 
-def filter_stop_words(frequencies: dict, stop_words: tuple) -> dict:
-  pass
+Count frequencies dictionary by the given arbitrary text
+"""
 
-def get_top_n(frequencies: dict, top_n: int) -> tuple:
-  pass
+
+def calculate_frequences() -> dict:
+    """
+    Calculates number of times each word appears in the text
+    """
+    pass
+
+def filter_stop_words() -> dict:
+    """
+    Removes all stop words from the given frequencies dictionary
+    """
+    pass
+
+def get_top_n() -> tuple:
+    """
+    Takes first N popular words
+    """
+    pass

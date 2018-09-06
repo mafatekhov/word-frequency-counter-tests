@@ -1,1 +1,3 @@
-numpy
+mosspy==1.0.5
+pylint==2.1.1
+pycode_similar==1.2
