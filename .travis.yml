@@ -21,6 +21,7 @@ jobs:
     - stage: plagiarism_check
       script: 
         - python3 config/pr_crawler.py
+        - ls -la tmp/lab1_frequences_counter
         - python3 config/plagiarism_check.py --source-dir lab1_frequences_counter/ --others-dir tmp/lab1_frequences_counter/
 
 notifications:

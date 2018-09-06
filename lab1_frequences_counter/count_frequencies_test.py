@@ -16,4 +16,4 @@ class CountFrequenciesTest(unittest.TestCase):
         """
         Ideal scenario
     	"""
-        self.assertEqual(main.calculate_frequences(), 0)
+        self.assertFalse(main.calculate_frequences())
